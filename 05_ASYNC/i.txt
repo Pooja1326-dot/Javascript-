@@ -1,0 +1,7 @@
+javascript ==> synchronous , single threaded
+
+execution context => execute oneline of code at a time.=>console.log(1)=>console.log(2)
+
+blocking code=>block the flow of program =>read file sync
+nonblocking code=>do not block execution =>read file async
+

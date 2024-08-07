@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="orange">Orange</button>
+    <button id="blue">Blue</button>
+</body>
+<script>
+    //lexical scopping
+    function init() {
+        //inner function is acess also outer function 
+        let name = "mozilla";
+        console.log(secret);                 //error -->
+        function inner() {
+            let secret = "my123"
+        }
+        function displayName() {
+            console.log(name);
+            console.log(secret); 
+        }
+        displayName();
+        inner();
+    }
+    init();
+
+
+
+    function makeFun() {
+        const name = "neha";
+        function display() {
+            console.log(name);
+        }
+        return display;
+    }
+    const myFun = makeFun();
+    myFun();
+
+
+</script>
+
+<script>
+    //document.getElementById("orange").onclick=function(){
+        //document.body.style.backgroundColor=`orange`;
+    
+   // }
+    //document.getElementById("blue").onclick=function(){
+        //document.body.style.backgroundColor=`blue`;
+   // }
+
+    function clickHandler(color) {
+        return function(){
+            document.body.style.background=`${color}`
+        }
+    }
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('blue').onclick = clickHandler("blue")
+</script>
+</html>

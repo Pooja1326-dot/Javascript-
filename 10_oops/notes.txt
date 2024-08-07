@@ -1,0 +1,25 @@
+javascript and classes
+
+javascript is prototype language
+
+OOPS 
+
+object =>
+collection of properties and methods
+lowercase
+
+Object literal
+
+constructor function
+prototypes
+classes
+instances (new,this)
+
+4 pillars => 
+abstraction=>detail hides (fetch) 
+encapsulation => rape of data acess data 
+inheritance
+polymorphism
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setTimeOut</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const pooja=function(){
+        console.log("pooja");
+  }
+  setTimeout(pooja,3000)   //one time only not repeated
+
+  const changText=function(){       
+  document.querySelector("h1").innerHTML="best js"
+  }
+ const changeMe=setTimeout(changText,2000)
+  document.querySelector("#stop").addEventListener("click",function(){
+    clearTimeout(changeMe)
+    console.log("stoped")
+  })
+  
+
+</script>
+</html>

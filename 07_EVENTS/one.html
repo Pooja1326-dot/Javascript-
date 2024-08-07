@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+
+<body style="background-color: #414141;color:aliceblue">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="i" src="ooo.jpg"></li>
+            <li><img width="200px" id="i2" src="put.jpg"></li>
+            <li><img width="200px" id="i3" src="blub.jpg"></li>
+            <li><img width="200px" id="i4" src="cube.jpg"></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    //attachEvent()
+    //jquery-on
+
+    //important
+    //type , timestamp, defaultprevented, target , toelement, srcElement, CurrentTarget
+    //clientX, clientY, screenY, ScreenX
+    //altkey, ctrlkey, ahiftkey, keycode
+
+
+    document.getElementById("images").addEventListener("click", function (e) {
+        console.log("clicked inside the ul")
+    }, false)
+
+    document.getElementById("i3").addEventListener("click", function (e) {
+        console.log("clicked i3")
+        e.stopPropagation()
+    }, false)//propogration==>1>bubling==>false and 2>capturing==>true
+
+    document.getElementById('i4').addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation()     //stop bubling
+        console.log("clicked")
+    })
+
+    document.getElementById("images").addEventListener("click", function (e) {
+        console.log(e.target.tagName);      // console.log(e.target.parentNode);
+        if (e.target.tagName === "IMG") {
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        }
+
+        //click on images and its disable
+    })
+    //or 
+    //removeIt.parentNode.removeChild(removeIt)
+
+</script>
+
+</html>

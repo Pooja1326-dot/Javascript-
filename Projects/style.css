@@ -1,0 +1,44 @@
+
+body{
+    background-color: rgb(12, 15, 15);
+    color:white;
+}
+        .all{
+            display: flex;
+            gap:20px;
+        }
+
+        .all #grey {
+            background-color: gray;
+            width:100px;
+            height:100px;
+         
+        }
+
+       .all #white {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+         
+        }
+
+        .all #blue {
+            background-color: blue;
+            width:100px;
+            height: 100px;
+         
+        }
+
+        .all #yellow {
+            background-color: yellow;
+            width: 100px;
+            height:100px;
+         
+        }
+
+        .all #purple{
+            background-color: rgb(114, 11, 98);
+            width: 100px;
+            height:100px;
+         
+        }
